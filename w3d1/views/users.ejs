@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>User list!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      table {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      td {
+        border: 1px solid black;
+        min-width: 20ch;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include("partials/_header") %>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <td>User id</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Link</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(const user of users){ %>
+            <tr>
+              <td><%= user.id %></td>
+              <td><%= user.name %></td>
+              <td><%= user.email %></td>
+              <td><a href="/users/<%= user.id %>">Link to user</a></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </main>
+    <footer>Copyright <%= new Date().getFullYear() %></footer>
+  </body>
+</html>
