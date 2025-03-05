@@ -1,0 +1,38 @@
+<%- include('partials/_head.ejs') %>
+<section>
+	<h1>
+		<span>Super secret thief page !</span>
+	</h1>
+	<% if(thief){ %>
+		<h2>
+			Hello <%= thief.name %>!
+		</h2>
+	<% } %>
+</section>
+<section>
+	<main>
+		<div class="door">
+		</div>
+		<% if(thief){ %>
+			<img src="<%= thief.imagePath %>" >
+		<% } %>
+		</main>
+		<% if(error) { %>
+			<p style="color:red;font-weight:900;text-align: center;"><%= error %></p>
+		<% } %>
+		<% if(!thief){ %>
+			<form action="/login" method="POST" style="margin-top:1em;">
+				<input type="text" placeholder="Enter your email" name="email">
+				<input type="password" placeholder="Enter your password" name="password">
+				<button>Check your vault</button>
+			</form>		
+		<% } else { %>
+			<form action="/logout" method="POST" style="margin-top:1em;">
+				<button>Close the vault</button>
+			<% } %>
+		</section>
+	<section>
+	</section>
+	</body>
+
+	</html>
