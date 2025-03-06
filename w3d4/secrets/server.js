@@ -2,12 +2,17 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const cookieSession = require("cookie-session");
+const dotenv = require("dotenv")
+dotenv.config()
 
 // Set up data + helpers
-const generatedSalt = "$2a$04$rJDqAfVCv6uNu.L68kEUju"
+const generatedSalt = process.env.SALT;
 const users = require("./data/users");
 const generateUserHelpers = require("./helpers/userHelpers");
-const { getUserByEmail, authenticateUser, createUser } = generateUserHelpers(users, generatedSalt);
+const { getUserByEmail, authenticateUser, createUser } = generateUserHelpers(
+  users,
+  generatedSalt
+);
 
 // Generate safe data
 
@@ -24,11 +29,7 @@ app.use(cookieParser());
 // Encrypt / Decrypt the content of the "session" cookie
 app.use(
   cookieSession({
-    keys: [
-      "Nodejs is great, but potatoes are better",
-      "We have fun small class to talk about this!",
-      "z28AJD97@9156!645",
-    ],
+    keys: [process.env.COOKIE_SESSION_KEY],
     name: "session",
   })
 );
@@ -37,7 +38,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Home route
 app.get("/", (req, res) => {
-  console.log(users)
+  console.log(users);
   return res.render("home");
 });
 
@@ -100,12 +101,11 @@ app.post("/register", (req, res) => {
   return res.redirect("/secret");
 });
 
-
 // Leaky route!
 
-app.get("/users", (req,res) => {
-  return res.json(users)
-})
+app.get("/users", (req, res) => {
+  return res.json(users);
+});
 
 app.listen(port, () => {
   console.log("Server is ready and listening on port:", port);
