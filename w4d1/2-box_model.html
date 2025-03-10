@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Box Model</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <style>
+    body{
+      background-color: #333;
+    }
+
+    /* i tag is inline by default */
+    i{
+      font-style: normal;
+      display: inline-block;
+
+      /* Border after the content */
+      border:2px solid brown;
+
+      /* Space between the content and the border */
+      padding:10px;
+
+      /* Space outside of the border and with other elements */
+      margin:10px;
+    }
+
+    h1, h2{
+      margin:0;
+    }
+
+    h1{
+      margin-bottom: 20px;;
+    }
+
+    header{
+      background-color: #bada55;
+      padding:20px;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Website title</h1>
+      <h2>Super tagline of destiny!</h2>
+    </header>
+    <section>
+      <i>☕</i>
+      <i>☕</i>
+      <i>☕</i>
+      <i>☕</i>
+      <i>☕</i>
+    </section>
+  </body>
+</html>

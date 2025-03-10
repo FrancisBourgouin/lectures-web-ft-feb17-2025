@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CSS Selectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kablammo&family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style type="text/css">
+    /* Cascading => Last one wins* */
+    /* * => At equal specificity */
+
+    /* Selector Specificity: (ID > CLASS > ELEMENT) */
+
+    header h1 {
+      font-family: "Kablammo", system-ui;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings: "MORF" 0;
+    }
+
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lexend", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-size: 40px;
+      font-family: "Lexend", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    main {
+      max-width: 1300px;
+    }
+
+    /* padding: 20px => top,bottom,left,right will have 20 */
+    /* padding: 20px 50px => top,bottom 20, left,right 50 */
+    /* padding: 20px 50px 10px => top 20, left,right 50, bottom:10 */
+    /* padding: 20px 50px 10px 5px => top 20, right 50, bottom 10, left 5 */
+    header {
+      padding: 20px 50px;
+      background-color: rgb(38, 121, 204);
+    }
+
+    header {
+      padding: 20px 100px;
+    }
+
+    header h1 {
+      text-align: center;
+    }
+
+    .top-news h1 {
+      color: #bada55;
+    }
+
+    main {
+      margin: 0 auto;
+    }
+
+    main h1 {
+      color: #b0b;
+    }
+
+    #sponsored h1 {
+      color: #000;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Super website of destiny!</h1>
+    </header>
+    <main>
+      <section class="top-news">
+        <h1>Top news!</h1>
+        <article id="sponsored">
+          <h1>Article 1</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione debitis
+            velit aut enim id minima, quis placeat explicabo minus eaque, magnam quos quas
+            numquam aperiam voluptatum, assumenda ut dolor.
+          </p>
+        </article>
+        <article>
+          <h1>Article 2</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione debitis
+            velit aut enim id minima, quis placeat explicabo minus eaque, magnam quos quas
+            numquam aperiam voluptatum, assumenda ut dolor.
+          </p>
+        </article>
+        <article>
+          <h1>Article 3</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione debitis
+            velit aut enim id minima, quis placeat explicabo minus eaque, magnam quos quas
+            numquam aperiam voluptatum, assumenda ut dolor.
+          </p>
+        </article>
+      </section>
+      <section class="bottom-news">
+        <h1>Bottom news!</h1>
+        <article>
+          <h1>Article 1</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione debitis
+            velit aut enim id minima, quis placeat explicabo minus eaque, magnam quos quas
+            numquam aperiam voluptatum, assumenda ut dolor.
+          </p>
+        </article>
+        <article>
+          <h1>Article 2</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione debitis
+            velit aut enim id minima, quis placeat explicabo minus eaque, magnam quos quas
+            numquam aperiam voluptatum, assumenda ut dolor.
+          </p>
+        </article>
+        <article>
+          <h1>Article 3</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione debitis
+            velit aut enim id minima, quis placeat explicabo minus eaque, magnam quos quas
+            numquam aperiam voluptatum, assumenda ut dolor.
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

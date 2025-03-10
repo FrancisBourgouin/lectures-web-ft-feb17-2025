@@ -107,6 +107,14 @@ app.get("/users", (req, res) => {
   return res.json(users);
 });
 
+// Logout
+
+app.post("/logout", (req,res) => {
+  req.session.email = null
+
+  return res.redirect("/")
+})
+
 app.listen(port, () => {
   console.log("Server is ready and listening on port:", port);
 });
