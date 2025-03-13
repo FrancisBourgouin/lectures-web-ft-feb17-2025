@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* General CSS */
+      img {
+        width: 100%;
+      }
+
+      section {
+        padding: 1em;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+      }
+
+      article {
+        border: 0.2em solid black;
+        max-width:550px;
+        margin:0 auto;
+      }
+
+      p {
+        font-size: 3em;
+        text-align: center;
+      }
+
+      /* Starting from 1000px to infinity */
+      @media screen and (min-width: 1000px) {
+        section {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      
+      /* Starting from 1500px to infinity */
+      @media screen and (min-width: 1500px) {
+        section {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article>
+        <img src="images/20220131174506_1.jpg" alt="" />
+        <p>An image!</p>
+      </article>
+      <article>
+        <img src="images/20220131221341_1.jpg" alt="" />
+        <p>An image!</p>
+      </article>
+      <article>
+        <img src="images/20220201000857_1.jpg" alt="" />
+        <p>An image!</p>
+      </article>
+      <article>
+        <img src="images/20220202213814_1.jpg" alt="" />
+        <p>An image!</p>
+      </article>
+    </section>
+  </body>
+</html>

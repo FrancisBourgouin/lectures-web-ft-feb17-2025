@@ -1,0 +1,38 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+}
+
+p {
+  max-width: 80ch;
+}
+
+header {
+  background-color: #6178de;
+  padding: 2em;
+  text-align: center;
+}
+header h1 {
+  color: #41d78d;
+}
+header h2 {
+  color: #41d78d;
+}
+header h3 {
+  background-color: #41d78d;
+  color: #6178de;
+}
+@media screen and (max-width: 600px) {
+  header {
+    background-color: #abc;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */
