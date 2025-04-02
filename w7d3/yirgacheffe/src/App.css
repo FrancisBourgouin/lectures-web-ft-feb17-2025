@@ -1,0 +1,76 @@
+body,html{
+  margin:0;
+  font-size:24px;
+}
+
+.Header{
+  font-size: 1em;
+  background-color: #c0ffee;
+  color:black;
+  padding:1em;
+  text-align: center;
+}
+
+
+.Question{
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img{
+      width:50px;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+  }
+}
+
+.ReplyList{
+  width:100%;
+  margin:0 auto;
+  max-width:1200px;
+}
+
+
+.ReplyListItem{
+  width:100%;
+  display: grid;
+  grid-template-columns: 4em auto;
+  grid-template-rows: auto auto;
+  margin:1em 0;
+
+  grid-template-areas: 
+    "profile reply"
+    "name likes"
+  ;
+
+  background-color: #b0b;
+
+  &:nth-child(2n){
+    background-color: transparent;
+  }
+
+  img{
+    grid-area: profile;
+    width:100%;
+  }
+  p.name{
+    grid-area: name;
+  }
+  p.reply{
+    grid-area: reply;
+  }
+  div{
+    grid-area: likes;
+  }
+}
+
+.ReplyForm{
+  text-align: center;
+  margin:1em 0;
+  input, button{
+    font-size:2em;
+  }
+}
