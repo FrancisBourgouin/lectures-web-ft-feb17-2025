@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.Game div{
+  width:600px;
+  height:600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:1em;
+  background-color: white;
+
+  button{
+    background-color: #b0b;;
+  }
+}
