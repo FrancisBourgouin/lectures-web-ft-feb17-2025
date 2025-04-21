@@ -1,0 +1,17 @@
+<% content_for :title, "New user" %>
+
+<h1>Login for user!</h1>
+
+<%= form_tag '/login' do %>
+
+  Email: <%= text_field_tag :email %>
+  Password: <%= password_field_tag :password %>
+  <%= submit_tag "Submit" %>
+
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Register instead!", new_user_path %>
+</div>
